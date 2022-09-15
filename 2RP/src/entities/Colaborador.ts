@@ -34,4 +34,9 @@ export class Colaborador {
     @ManyToOne(() => CR, CR => CR.colaboradores, { onDelete: 'CASCADE' })
 	@JoinColumn({ name: 'cr_id' })
 	cr: CR
+
+	@ManyToOne(() => Colaborador, colaborador => colaborador.gestor, { onDelete: 'CASCADE' })
+	@JoinColumn({ name: 'gestor_id' })
+	gestor: Colaborador
+
 }

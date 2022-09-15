@@ -22,7 +22,7 @@ export class Lancamento {
     data_fim: Date
 
     @Column({nullable: true, type: "text"})
-    justificativa: string
+    observacoes: string
 
     @Column({type: "enum", enum:['aprovado', 'pendente', 'reprovado'], default: 'pendente', nullable: false})
     status: Status
@@ -30,10 +30,6 @@ export class Lancamento {
 	@ManyToOne(() => Colaborador, colaborador => colaborador.lancamentos, { onDelete: 'CASCADE' })
 	@JoinColumn({ name: 'colaborador_id' })
 	colaborador: Colaborador
-
-	@ManyToOne(() => Colaborador, colaborador => colaborador.lancamentos, { onDelete: 'CASCADE' })
-	@JoinColumn({ name: 'gestor_id' })
-	gestor: Colaborador
 
     @ManyToOne(() => Projeto, projeto => projeto.lancamentos, { onDelete: 'CASCADE' })
 	@JoinColumn({ name: 'projeto_id' })

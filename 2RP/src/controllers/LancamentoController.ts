@@ -5,10 +5,10 @@ import { Lancamento } from "../entities/Lancamento";
 export default class LancamentoController {
 
     async salvarLancamento(req: Request, res: Response) {
-        const { modalidade, inicio, fim, justificativa, colaborador, gestor, projeto } = req.body
+        const { modalidade, data_inicio, data_fim, observacoes, colaborador, projeto } = req.body
 
         try {
-            const novoLancamento = AppDataSource.manager.create(Lancamento, { modalidade, inicio, fim, justificativa, colaborador, gestor, projeto })
+            const novoLancamento = AppDataSource.manager.create(Lancamento, { modalidade, data_inicio, data_fim, observacoes, colaborador, projeto })
             await AppDataSource.manager.save(Lancamento, novoLancamento)
 
             return res.json(novoLancamento)
@@ -23,7 +23,6 @@ export default class LancamentoController {
             const lancamentos = await AppDataSource.manager.find(Lancamento, {
                 relations: {
                     colaborador: true,
-                    gestor: true,
                     projeto: true,
                     verbas: true
                 },
