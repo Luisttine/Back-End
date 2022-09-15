@@ -3,6 +3,6 @@ import ColaboradorController from '../controllers/ColaboradorController'
 
 const routesColaborador = Router()
 
-routesColaborador.get('/selectGestores', new ColaboradorController().selectGestores)
+routesColaborador.get('/selectColaboradores', new ColaboradorController().selectColaboradores)
 
 export default routesColaborador

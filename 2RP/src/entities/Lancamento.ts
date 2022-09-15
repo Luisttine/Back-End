@@ -16,10 +16,10 @@ export class Lancamento {
     modalidade: Modalidade
 
     @Column({nullable: false})
-    inicio: Date
+    data_inicio: Date
 
     @Column({nullable: false})
-    fim: Date
+    data_fim: Date
 
     @Column({nullable: true, type: "text"})
     justificativa: string
