@@ -3,6 +3,5 @@
 ### Necessário:
 
 - [NodeJS](https://nodejs.org/en/download/)
-- NPM
-- Banco de dados 
-  - [PostgreSQL](https://www.postgresql.org/download/)
+- [npm](https://www.npmjs.com/package/download)
+- Data-base - [PostgreSQL](https://www.postgresql.org/download/)
