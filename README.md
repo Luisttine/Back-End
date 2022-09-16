@@ -1,6 +1,6 @@
-<h1 align="center"> 
+<h2 align="center"> 
 📌 Manual de Instalação
-</h1>
+</h2>
 
 Clique nos links abaixo para efetuar o download dos requisitos necessários para rodar o projeto em sua máquina.
 
