@@ -1,4 +1,6 @@
-## 📌 Manual de Instalação
+<h1 align="center"> 
+📌 Manual de Instalação
+</h1>
 
 ### Necessário:
 
